@@ -38,4 +38,49 @@ Finally, you can search related artists. In this case, you need the artist ID (a
 related_artists<-get_related_artists(artist_uri = artist$artista_uri)
 ```
 
+# Get Albums Information
+
+You can get the whole discography of an artist in few seconds with the function get_artists_albums. You must select one of the next options to the parameter album_type (default option is album):
+
+- album
+- single
+- appears_on
+- compilation
+
+```
+albums <- get_artists_albums('Arctic Monkeys')
+
+albums <- get_artists_albums('Arctic Monkeys', album_type = 'appears_on', limit = 20)
+```
+
+# Get Tracks Information
+
+Firstly, you can get all the tracks of an artist. This can be done with the next function:
+
+```
+tracks <- get_artist_tracks('Arctic Monkeys')
+```
+
+You can also get all the tracks features information (like danceability, mode, acousticness, speechness, valence, loudness...) for an artist:
+
+```
+features <- get_artist_tracks_features('Arctic Monkeys')
+```
+
+You can also search for tracks recommendations based on another track. You can choose the number of recommended tracks returned:
+
+```
+recommended_songs <- get_tracks_recommendations_by_name('Arctic Monkeys', 'Do I Wanna Know?', limit = 10)
+```
+
+
+
+
+
+
+
+
+
+
+
 
