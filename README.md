@@ -3,6 +3,7 @@
 
 [![Lifecycle:
 stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://www.tidyverse.org/lifecycle/#stable)
+[![Build Status](https://travis-ci.com/AlbertoAlmuinha/DSpoty.svg?branch=master)](https://travis-ci.com/AlbertoAlmuinha/DSpoty)
 
 R Package to Get Multiple Information from Spotify API.
 
