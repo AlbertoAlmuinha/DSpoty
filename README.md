@@ -18,9 +18,9 @@ devtools::install_github('https://github.com/AlbertoAlmuinha/DSpoty')
 You need to get your Spotify API Client ID and Secret ID. You can get
 yours [here](https://developer.spotify.com/dashboard/) . The best way to
 authenticate is to set your ID’s to system environment variables
-(client\_id and secret\_id). If you prefer, you can use your ID’s en
+(client\_id and secret\_id). If you prefer, you can use your ID’s in
 each function to call the function get\_spotify\_access\_token, but it’s
-not recomendable.
+not recommendable.
 
 ``` r
 Sys.setenv(client_id = 'client_id')
