@@ -1,7 +1,5 @@
 
-# DSpoty
-
-<img src='man/figures/logo.png' align="right" height="139" />
+# DSpoty <img src='man/figures/logo.png' align="right" height="139" />
 
 [![Lifecycle:
 stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://www.tidyverse.org/lifecycle/#stable)
