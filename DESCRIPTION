@@ -1,0 +1,18 @@
+Package: DSpoty
+Type: Package
+Date: 2020-01-07
+Title: Get Spotify API Multiple Information
+Version: 0.1.0
+Author: Alberto Almuiña <albertogonzalezalmuinha@gmail.com>
+Maintainer: Alberto Almuiña <albertogonzalezalmuinha@gmail.com>
+Description: Load multiple artists, albums, tracks, tracks features and recommendations from Spotify API.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.1
+URL: https://github.com/AlbertoAlmuinha/DSpoty
+Imports: 
+    dplyr,
+    purrr,
+    httr,
+    stringr
