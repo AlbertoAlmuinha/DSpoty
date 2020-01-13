@@ -1,0 +1,20 @@
+Package: DSpoty
+Type: Package
+Date: 2020-01-07
+Title: Get 'Spotify' API Multiple Information
+Version: 0.1.0
+Author: Alberto Almuiña <albertogonzalezalmuinha@gmail.com>
+Maintainer: Alberto Almuiña <albertogonzalezalmuinha@gmail.com>
+Description: 'DSpoty' R package allows you to retrieve 'Spotify' API Information such as artists, albums, tracks, features tracks, recommendations or related artists.
+    This package allows you to search all the information by name and also includes a distance based algorithm to find similar songs.
+	More information: <https://developer.spotify.com/documentation/web-api/> .
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.1
+URL: https://github.com/AlbertoAlmuinha/DSpoty
+Imports: 
+    dplyr,
+    purrr,
+    httr,
+    stringr
