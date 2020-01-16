@@ -10,6 +10,14 @@ R Package to Get Multiple Information from Spotify API.
 
 # Installation
 
+You can install the package from the CRAN repository:
+
+``` r
+install.packages("DSpoty")
+```
+
+or try the development version from GitHub:
+
 ``` r
 devtools::install_github('https://github.com/AlbertoAlmuinha/DSpoty')
 ```
