@@ -5,9 +5,9 @@
 [![Lifecycle:
 stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://www.tidyverse.org/lifecycle/#stable)
 [![Build Status](https://travis-ci.com/AlbertoAlmuinha/DSpoty.svg?branch=master)](https://travis-ci.com/AlbertoAlmuinha/DSpoty)
-![](https://cranlogs.r-pkg.org/badges/grand-total/DSpoty?color=brightgreen)
+[![Total Downloads](http://cranlogs.r-pkg.org/badges/grand-total/DSpoty?color=brightgreen)](https://cran.r-project.org/package=DSpoty)
 
-R Package to Get Multiple Information from Spotify API.
+> R Package to Get Multiple Information from Spotify API.
 
 # Installation
 
@@ -22,8 +22,9 @@ or try the development version from GitHub:
 ``` r
 devtools::install_github('https://github.com/AlbertoAlmuinha/DSpoty')
 ```
-
+****
 # Authentication
+****
 
 You need to get your Spotify API Client ID and Secret ID. You can get
 yours [here](https://developer.spotify.com/dashboard/) . The best way to
@@ -39,14 +40,20 @@ Sys.setenv(client_secret = 'client_secret')
 access_token <- DSpoty::get_spotify_access_token()
 ```
 
+****
 # Usage
+****
 
+****
 ## Get Artist Information
+****
 
 You can get an artist Spotify information with the function
 get\_artists. This function returns data like the name of the artist,
 links to open in spotify, popularity, number of followers or musical
 genre.
+
+&nbsp;
 
 ``` r
 artist <- get_artist('Arctic Monkeys')
@@ -156,6 +163,8 @@ garage\_rock-modern\_rock-permanent\_wave-rock-sheffield\_indie
 
 </table>
 
+&nbsp;
+
 Another option is to search artists by musical genre. You can choose the
 number of artists returned and the year. The information returned is the
 same that with get\_artists function.
@@ -163,6 +172,8 @@ same that with get\_artists function.
 ``` r
 artists_by_genre <- get_artists_by_genre('rock', limit = 20, year = 2019)
 ```
+
+&nbsp;
 
 <table>
 
@@ -452,6 +463,8 @@ modern\_rock
 
 </table>
 
+&nbsp;
+
 Finally, you can search related artists. In this case, you need the
 artist ID (and not the name) to use the function. You can get this
 information from the function get\_artists or artists\_by\_genre. You
@@ -460,6 +473,8 @@ will get the top 20 related artist.
 ``` r
 related_artists<-get_related_artists(artist_uri = artist$artist_uri)
 ```
+
+&nbsp;
 
 <table>
 
@@ -641,7 +656,9 @@ Kasabian
 
 </table>
 
+****
 ## Get Albums Information
+****
 
 You can get the whole discography of an artist in few seconds with the
 function get\_artists\_albums. You must select one of the next options
@@ -654,11 +671,15 @@ to the parameter album\_type (default option is album):
 
 <!-- end list -->
 
+&nbsp;
+
 ``` r
 albums <- get_artist_albums('Arctic Monkeys')
 
 albums <- get_artist_albums('Arctic Monkeys', album_type = 'appears_on', limit = 20)
 ```
+
+&nbsp;
 
 <table>
 
@@ -1093,7 +1114,9 @@ JP
 
 </table>
 
+****
 ## Get Tracks Information
+****
 
 Firstly, you can get all the tracks of an artist. This can be done with
 the next function:
@@ -1101,6 +1124,8 @@ the next function:
 ``` r
 tracks <- get_artist_tracks('Arctic Monkeys')
 ```
+
+&nbsp;
 
 <table>
 
@@ -1498,12 +1523,18 @@ FALSE
 
 </table>
 
+&nbsp;
+
 You can also get all the tracks features information (like danceability,
 mode, acousticness, speechness, valence, loudness…) for an artist:
+
+&nbsp;
 
 ``` r
 features <- get_artist_tracks_features('Arctic Monkeys')
 ```
+
+&nbsp;
 
 <table>
 
@@ -2045,12 +2076,15 @@ popularity
 
 </table>
 
+&nbsp;
+
 You can also search for tracks recommendations based on another track.
 You can choose the number of recommended tracks returned:
 
 ``` r
 recommended_songs <- get_tracks_recommendations_by_name('Arctic Monkeys', 'Do I Wanna Know?', limit = 10)
 ```
+&nbsp;
 
 <table>
 
@@ -2412,7 +2446,9 @@ The Neighbourhood
 
 </table>
 
+****
 ## Search Spotify Item
+****
 
 You can also search an spotify item (artist, album or track) by name
 with the function get\_spotify\_item. We can use it in four different
@@ -2423,9 +2459,13 @@ ways:
 
 <!-- end list -->
 
+&nbsp;
+
 ``` r
 search_artist <- get_spotify_item(name = 'Arctic Monkeys', type = 'artist')
 ```
+
+&nbsp;
 
 <table>
 
@@ -2531,6 +2571,8 @@ garage\_rock-modern\_rock-permanent\_wave-rock-sheffield\_indie
 
 </table>
 
+&nbsp;
+
   - Search an album with the ‘name’ parameter. In this case, we can get
     similar results but not exactly the album name specified in the
     parameter function (We can try to use a higher limit to get the
@@ -2538,9 +2580,13 @@ garage\_rock-modern\_rock-permanent\_wave-rock-sheffield\_indie
 
 <!-- end list -->
 
+&nbsp;
+
 ``` r
 search_album <- get_spotify_item(name = 'Nuclear', type = 'album')
 ```
+
+&nbsp;
 
 <table>
 
@@ -3082,14 +3128,20 @@ US
 
 </table>
 
+&nbsp;
+
   - Search an album with the ‘artist’ and ‘album’ parameters to avoid
     the problem.
+    
+&nbsp;
 
 <!-- end list -->
 
 ``` r
 search_album_2 <- get_spotify_item(artist = 'Leiva', album = 'Nuclear', type = 'album')
 ```
+
+&nbsp;
 
 <table>
 
@@ -3231,13 +3283,19 @@ AD
 
 </table>
 
+&nbsp;
+
   - Search a specific track.
+  
+&nbsp;
 
 <!-- end list -->
 
 ``` r
 search_track <- get_spotify_item(name = 'Do I Wanna Know?' , type = 'track')
 ```
+
+&nbsp;
 
 <table>
 
@@ -3379,18 +3437,16 @@ FALSE
 
 </table>
 
+****
 # Issues
+****
 
 If you find some type of error, bug or doubt, please, let me know it
 [here](https://github.com/AlbertoAlmuinha/DSpoty/issues) .
 
-# DSpoty Shiny App
-
-The DSpoty App is an R Shiny Dashboard that shows multiple information
-based on DSpoty R package. You can access this App from
-[here](https://github.com/AlbertoAlmuinha/DSpotyApp) .
-
+****
 # License
+****
 
 This package (DSpoty) is licensed under the MIT License.
 

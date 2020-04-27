@@ -18,3 +18,7 @@ Imports:
     purrr,
     httr,
     stringr
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
